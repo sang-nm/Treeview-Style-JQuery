@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo</title>
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="jquery-treetable.css">
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="jquery-treetable.js"></script>
+	<script>
+		$(function () {
+			$("table").treetable();
+		});
+	</script>
+	<style>
+		body {
+			background-color: #fbfbfb;
+		}
+
+		.tt-table div.tt div.parent-tail {
+			border-left: 2px gray solid;
+			position: absolute;
+			border-radius: 2px;
+			bottom: 11px;
+			left: -10px;
+			z-index: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="jquery-script-menu">
+		<div class="jquery-script-center">
+			<ul>
+			</ul>
+			<div class="jquery-script-ads">
+				<!-- <script type="text/javascript">
+						google_ad_client = "ca-pub-2783044520727903";
+					/* jQuery_demo */
+					google_ad_slot = "2780937993";
+					google_ad_width = 728;
+					google_ad_height = 90;
+
+				</script> -->
+				<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+			<div class="jquery-script-clear"></div>
+		</div>
+	</div>
+	<div class="container" style="margin:150px auto;">
+		<h1> Demo</h1>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+
+
+					<th style="width:600px">Divison</th>
+					<th>Cấp bậc</th>
+					<th>Tên</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+
+
+
+					<td>
+						<div class="tt" data-tt-id="root" data-tt-parent="">Long An Headquater</div>
+					</td>
+					<td>BOD</td>
+					<td>MR JEON SAE BYUK</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="bm1" data-tt-parent="root">Business Management 1</div>
+					</td>
+					<td>M</td>
+					<td>MR EUN SE JUN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="bm2" data-tt-parent="root">Business Management 2</div>
+					</td>
+					<td>M</td>
+					<td>MR LEE JI HYUN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="bm3" data-tt-parent="root">Business Admin Department</div>
+					</td>
+					<td>M</td>
+					<td>MR KIEU TRONG NHAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="acc1" data-tt-parent="bm3">General Accounting 1 Team</div>
+					</td>
+					<td>M</td>
+					<td>MR THAN VAN DUY LAM</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="acc2" data-tt-parent="bm3">General Accounting 2 Team</div>
+					</td>
+					<td>M</td>
+					<td>MS NGO THI ANH </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="acc3" data-tt-parent="bm3">General Accounting 3 Team</div>
+					</td>
+					<td>M</td>
+					<td>Empty </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="app" data-tt-parent="bm3">Account Payable Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MS TRAN THI MY LINH </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="scm" data-tt-parent="bm3">SCM Parrt</div>
+					</td>
+					<td>Sup</td>
+					<td>MR TRAN ANH TUAN </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="ar" data-tt-parent="bm3">Account Recevivable</div>
+					</td>
+					<td>Sen</td>
+					<td>MS LE THI PHUONG HUYEN </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="check" data-tt-parent="bm3">Contract Checking</div>
+					</td>
+					<td>Sup</td>
+					<td>MS PHAM THI THU LUU </td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="check" data-tt-parent="bm3">IT Project (K)</div>
+					</td>
+					<td>DM</td>
+					<td>MR KIEU TRONG NHAN </td>
+				</tr>
+
+
+
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="hr" data-tt-parent="root">HR Team</div>
+					</td>
+					<td>M</td>
+					<td>NGUYEN THE DUY</td>
+				</tr>
+				<tr>
+
+					<td>
+						<div class="tt" data-tt-id="cb" data-tt-parent="hr">C&B Part (K)</div>
+					</td>
+					<td>M</td>
+					<td>NGUYEN THE DUY</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="od" data-tt-parent="hr">OD & ER PART</div>
+					</td>
+					<td>SUP</td>
+					<td>MS.HUYNH THI HA VY</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="it" data-tt-parent="hr">IT Operation</div>
+					</td>
+					<td>Sen</td>
+					<td>HUYNH PHUONG THANH</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="sp" data-tt-parent="hr">Support Admin Part (K)</div>
+					</td>
+					<td>SUP</td>
+					<td>MR.NGUYEN CHANH TRUC</td>
+				</tr>
+				<tr>
+
+					<td>
+						<div class="tt" data-tt-id="rp1" data-tt-parent="hr">Recruit Part</div>
+					</td>
+					<td>Sup</td>
+					<td>DINH VAN HIEP</td>
+				</tr>
+				<tr>
+
+					<td>
+						<div class="tt" data-tt-id="bd" data-tt-parent="rp1">Binh Duong</div>
+					</td>
+					<td>Sen</td>
+					<td>VAN HUU TRUC</td>
+
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="dn" data-tt-parent="rp1">Dong Nai</div>
+					</td>
+					<td>Sen</td>
+					<td>LE THI MINH KHA</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="ct" data-tt-parent="rp1">Central</div>
+					</td>
+					<td>Sen</td>
+					<td>DO THAN TIEU PHUNG</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="hcm" data-tt-parent="rp1">Long An & HCM </div>
+					</td>
+					<td>Sen</td>
+					<td>1</td>
+				</tr>
+				<tr>
+
+					<td>
+						<div class="tt" data-tt-id="rp2" data-tt-parent="hr">Recruit Part</div>
+					</td>
+					<td>Sup</td>
+					<td>DINH VAN HIEP</td>
+				</tr>
+				<tr>
+
+					<td>
+						<div class="tt" data-tt-id="bd" data-tt-parent="rp2">Binh Duong</div>
+					</td>
+					<td>Sen</td>
+					<td>VAN HUU TRUC</td>
+
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="dn" data-tt-parent="rp2">Dong Nai</div>
+					</td>
+					<td>Sen</td>
+					<td>LE THI MINH KHA</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="ct" data-tt-parent="rp2">Central</div>
+					</td>
+					<td>Sen</td>
+					<td>DO THAN TIEU PHUNG</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="hcm" data-tt-parent="rp2">Long An & HCM </div>
+					</td>
+					<td>Sen</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="audit" data-tt-parent="root">Audit Team</div>
+					</td>
+					<td>M</td>
+					<td>MR LE NGOC THANH</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="process" data-tt-parent="audit">Process Checking Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR LAM CAO ANH TUAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="security" data-tt-parent="audit">Security Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR NGUYEN HAI LUAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="cctv" data-tt-parent="audit">CCTV Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR VO MINH TOAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="hotline" data-tt-parent="audit">Hotline Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR LE MINH PHUONG</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="statistics" data-tt-parent="audit">Statistics Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR HOANG DINH QUAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="legal" data-tt-parent="audit">Legal Case</div>
+					</td>
+					<td>Sen</td>
+					<td>MS PHAM HO NHU HAO</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="pur" data-tt-parent="root">Purchasing Team</div>
+					</td>
+					<td>M</td>
+					<td>MR PHAN VAN MINH</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="equip" data-tt-parent="root">Equipment Part</div>
+					</td>
+					<td>Sup</td>
+					<td>MR VO VAN MAN</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="medicine" data-tt-parent="root">Mecdicine</div>
+					</td>
+					<td>Sen</td>
+					<td>MS NGUYEN THI HAU</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="tt" data-tt-id="newbiz" data-tt-parent="root">Mecdicine</div>
+					</td>
+					<td>Sen</td>
+					<td>MS NGUYEN THI HAU</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36251023-1']);
+		_gaq.push(['_setDomainName', 'jqueryscript.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+</body>
+
+</html>
